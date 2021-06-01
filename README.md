@@ -1,4 +1,5 @@
 # CAT: Cross Attention in Vision Transformer
+
 This is official implement of ["CAT: Cross Attention in Vision Transformer"]().
 
 Code is coming soon.
@@ -47,7 +48,12 @@ Note: <sup>+</sup> indicates multi-scale training.
 | CAT-S | Semantic FPN | ImageNet-1K | 512x512 | 160K | 42.2 | 42.8 | 41M | 214G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/semantic_fpn_cat_small_160k_ade20k.pth) | Coming |
 | CAT-B | Semantic FPN | ImageNet-1K | 512x512 | 160K | 43.2 | 44.9 | 55M | 276G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/semantic_fpn_cat_base_160k_ade20k.pth) | Coming |
 
-## Getting Started
-Coming soon.
-
 ## Citing CAT
+
+## Started
+
+Please refer to [get_started]().
+
+## Acknowledgement
+
+Our implementation is mainly based on [Swin](https://github.com/microsoft/Swin-Transformer).

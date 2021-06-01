@@ -1,0 +1,10 @@
+MODEL:
+  TYPE: CAT
+  NAME: cat_base
+  DROP_PATH_RATE: 0.3
+  CAT:
+    EMBED_DIM: 96
+    DEPTHS: [ 1, 1, 6, 1 ]
+    NUM_HEADS: [ 3, 6, 12, 24 ]
+    PATCH_SIZE: 7
+    APE: True
