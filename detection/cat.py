@@ -6,8 +6,8 @@ import numpy as np
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 
 from mmcv_custom import load_checkpoint
-from mmseg.utils import get_root_logger
-from mmseg.models.builder import BACKBONES
+from mmdet.utils import get_root_logger
+from mmdet.models.builder import BACKBONES
 
 
 def partition(x, patch_size):
@@ -389,13 +389,14 @@ class CATLayer(nn.Module):
             self.cpsa_blocks[i].H, self.cpsa_blocks[i].W = H, W
             self.post_ipsa_blocks[i].H, self.post_ipsa_blocks[i].W = H, W
             if self.use_checkpoint:
+                pass
                 x = checkpoint.checkpoint(self.pre_ipsa_blocks[i], x)
                 x = checkpoint.checkpoint(self.cpsa_blocks[i], x)
                 x = checkpoint.checkpoint(self.post_ipsa_blocks[i], x)
             else:
-                x = checkpoint.checkpoint(self.pre_ipsa_blocks[i], x)
-                x = checkpoint.checkpoint(self.cpsa_blocks[i], x)
-                x = checkpoint.checkpoint(self.post_ipsa_blocks[i], x)
+                x = self.pre_ipsa_blocks[i].forward(x)
+                x = self.cpsa_blocks[i].forward(x)
+                x = self.post_ipsa_blocks[i].forward(x)
 
         if self.downsample is not None:
             x_down = self.downsample(x, H, W)
@@ -404,7 +405,7 @@ class CATLayer(nn.Module):
         else:
             return x, H, W, x, H, W
         return x
-
+    
 
 class PatchEmbedding(nn.Module):
     """ Image to Patch Embedding
