@@ -41,6 +41,7 @@ def reverse(patches, patch_size, H, W):
 
 
 class Mlp(nn.Module):
+    """ Multilayer perceptron."""
     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0.):
         super().__init__()
         out_features = out_features or in_features
@@ -361,9 +362,9 @@ class CATBlock(nn.Module):
         if self.attn_type == "ipsa":
             attn = self.attn(patches)  # nP*B, patch_size*patch_size, C
         elif self.attn_type == "cpsa":
-            patches = patches.view(B, (H // self.patch_size) ** 2, self.patch_size ** 2, C).permute(0, 3, 1, 2).contiguous()
-            patches = patches.view(-1,(H // self.patch_size) ** 2, self.patch_size ** 2) # nP*B*C, nP*nP, patch_size*patch_size
-            attn = self.attn(patches).view(B, C,(H // self.patch_size) ** 2,self.patch_size ** 2)
+            patches = patches.view(B, (H // self.patch_size) * (W // self.patch_size), self.patch_size ** 2, C).permute(0, 3, 1, 2).contiguous()
+            patches = patches.view(-1, (H // self.patch_size) * (W // self.patch_size), self.patch_size ** 2) # nP*B*C, nP*nP, patch_size*patch_size
+            attn = self.attn(patches).view(B, C, (H // self.patch_size) * (W // self.patch_size), self.patch_size ** 2)
             attn = attn.permute(0, 2, 3, 1).contiguous().view(-1, self.patch_size ** 2, C) # nP*B, patch_size*patch_size, C
         else :
             raise NotImplementedError(f"Unkown Attention type: {self.attn_type}") 
@@ -521,7 +522,7 @@ class CAT(nn.Module):
     """
 
     def __init__(self, img_size=224, patch_emb_size=4, in_chans=3, num_classes=1000,
-                 embed_dim=96, depths=[2, 2, 6, 2], num_heads=[3, 6, 12, 24],
+                 embed_dim=96, depths=[1, 1, 3, 1], num_heads=[3, 6, 12, 24],
                  patch_size=7, mlp_ratio=4., qkv_bias=True, qk_scale=None,
                  drop_rate=0., ipsa_attn_drop=0., cpsa_attn_drop=0., drop_path_rate=0.1,
                  norm_layer=nn.LayerNorm, ape=False, patch_norm=True, slice_emb=False,
