@@ -2,7 +2,7 @@
 
 This is official implement of ["CAT: Cross Attention in Vision Transformer"]().
 
-Code is coming soon.
+The paper will be public later.
 
 ## Abstract
 
@@ -19,6 +19,7 @@ CAT achieves strong performance on COCO object detection(implement with [mmdecte
 | CAT-T | 224x224 | 80.3 | 95.0 | 17M | 2.8G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/cat_tiny.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-9a38f9e3a84784940977/cat_tiny_log.txt)|
 | CAT-S | 224x224 | 81.8 | 95.6 | 37M | 5.9G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/cat_small.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-9a38f9e3a84784940977/cat_small_log.txt) |
 | CAT-B | 224x224 | 82.8 | 96.1 | 52M | 8.9G  | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/cat_base.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-9a38f9e3a84784940977/cat_base_log.txt) |
+| CAT-T-v2 | 224x224 | 81.7 | 96.5 | 36M | 3.9G  | Coming | Coming|
 
 ## Models and Results on Object Detection (COCO 2017 val)
 
@@ -50,9 +51,21 @@ Note: <sup>+</sup> indicates multi-scale training.
 
 ## Citing CAT
 
+The paper will be public later.
+
+You can cite it for now:
+```
+@misc{mmseg2020,
+    title={{MMSegmentation}: OpenMMLab Semantic Segmentation Toolbox and Benchmark},
+    author={MMSegmentation Contributors},
+    howpublished = {\url{https://github.com/open-mmlab/mmsegmentation}},
+    year={2020}
+}
+```
+
 ## Started
 
-Please refer to [get_started]().
+Please refer to [get_started](get_started.md).
 
 ## Acknowledgement
 
