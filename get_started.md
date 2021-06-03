@@ -1,5 +1,5 @@
 # Get start for CAT
-NOTE: We reimplement our method based on [Swin](https://github.com/microsoft/Swin-Transformer), the models and logs is old version. You will run into some problems with the wrong module names, but it can be fixed manually. We will update these resources when we have time. But you can reproduce our work and results with the following instructions.
+*NOTE*: We reimplement our method based on [Swin](https://github.com/microsoft/Swin-Transformer), the models and logs is old version. You will run into some problems with the wrong module names, but it can be fixed manually. We will update these resources when we have time. But you can reproduce our work and results with the following instructions.
 
 ## STARTED
 
@@ -32,7 +32,7 @@ git clone https://github.com/NVIDIA/apex
 cd apex
 pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
 ```
-NOTE: You may install `Apex` failed, please run install as follows:
+*NOTE*: You may install `Apex` failed, please run install as follows:
 ```
 pip install -v --no-cache-dir ./
 ```
@@ -69,19 +69,20 @@ The file structure should as follows:
 
 You can simplely run as follows:
 ```
-python -m torch.distributed.launch --nproc_per_node <number-of-gpus> --master_port 29500 main.py \
+python -m torch.distributed.launch --nproc_per_node <number-of-gpus> --master_port 10086 main.py \
 --cfg <config-file> --data-path <imagenet-path> --batch-size <batch-size>
 ```
 For `tiny`:
 ```
-python -m torch.distributed.launch --nproc_per_node 8 --master_port 29500  main.py --cfg configs/cat_tiny.yaml --data-path data/CLS-LOC --batch-size 128
+python -m torch.distributed.launch --nproc_per_node 8 --master_port 10086  main.py \
+--cfg configs/cat_tiny.yaml --data-path data/CLS-LOC --batch-size 128
 ``` 
 
 #### Evaluation
 
-You can evaluation models as follows:
+You can evaluate models as follows:
 ```
-python -m torch.distributed.launch --nproc_per_node <number-of-gpus> --master_port 29500 main.py \
+python -m torch.distributed.launch --nproc_per_node <number-of-gpus> --master_port 10086 main.py \
 --eval --cfg <config-file> --resume <checkpoint-file> --data-path <imagenet-path>
 ```
 
