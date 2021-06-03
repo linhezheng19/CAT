@@ -88,7 +88,7 @@ python -m torch.distributed.launch --nproc_per_node <number-of-gpus> --master_po
 
 ### Detection
 
-Out implementation is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please install [mmdetection](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md)
+Out implementation is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please install [mmdetection](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md).
 
 #### Training
 
@@ -111,7 +111,7 @@ bash dist_test.sh configs/retinanet_cat_small_fpn_1x_coco.py <checkpoint-file> 8
 
 ### Segmentation
 
-Out implementation is based on [mmsegmentation](https://github.com/open-mmlab/mmsegmentation). Please install [mmsegmentation](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/get_started.md)
+Out implementation is based on [mmsegmentation](https://github.com/open-mmlab/mmsegmentation). Please install [mmsegmentation](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/get_started.md).
 
 #### Training
 
@@ -138,5 +138,5 @@ To evaluate FLOPs of methods:
 
 ```
 cd detection # or cd segmentation
-python get_flops.py <config-file> --shape <evaluate-shape>
+python get_flops.py <config-file> [--shape <evaluate-shape>]
 ```
