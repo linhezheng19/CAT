@@ -1,5 +1,5 @@
 # Get start for CAT
-**NOTE**: We reimplement our method based on [Swin](https://github.com/microsoft/Swin-Transformer), the models and logs is old version. You will run into some problems with the wrong module names, but it can be fixed manually. We will update these resources when we have time. But you can reproduce our work and results with the following instructions.
+**NOTE**: We reimplement our method based on [Swin](https://github.com/microsoft/Swin-Transformer), the models and logs are old version. You will run into some problems with the wrong module names, but it can be fixed manually. We will update these resources when we have time. But you can reproduce our work and results with the following instructions.
 
 ## STARTED
 
