@@ -1,5 +1,5 @@
 # Get start for CAT
-*NOTE*: We reimplement our method based on [Swin](https://github.com/microsoft/Swin-Transformer), the models and logs is old version. You will run into some problems with the wrong module names, but it can be fixed manually. We will update these resources when we have time. But you can reproduce our work and results with the following instructions.
+**NOTE**: We reimplement our method based on [Swin](https://github.com/microsoft/Swin-Transformer), the models and logs is old version. You will run into some problems with the wrong module names, but it can be fixed manually. We will update these resources when we have time. But you can reproduce our work and results with the following instructions.
 
 ## STARTED
 
@@ -72,10 +72,10 @@ You can simplely run as follows:
 python -m torch.distributed.launch --nproc_per_node <number-of-gpus> --master_port 10086 main.py \
 --cfg <config-file> --data-path <imagenet-path> --batch-size <batch-size>
 ```
-For `tiny`:
+For `small`:
 ```
 python -m torch.distributed.launch --nproc_per_node 8 --master_port 10086  main.py \
---cfg configs/cat_tiny.yaml --data-path data/CLS-LOC --batch-size 128
+--cfg configs/cat_small.yaml --data-path data/CLS-LOC --batch-size 128
 ``` 
 
 #### Evaluation

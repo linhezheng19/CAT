@@ -8,6 +8,7 @@ __pycache__/
 
 .DS_Store
 /output
+/weights
 
 # Distribution / packaging
 .Python

@@ -1,6 +1,6 @@
 MODEL:
   TYPE: CAT
-  NAME: cat_smalll
+  NAME: cat_small
   DROP_PATH_RATE: 0.2
   CAT:
     EMBED_DIM: 96

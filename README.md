@@ -1,8 +1,6 @@
 # CAT: Cross Attention in Vision Transformer
 
-This is official implement of ["CAT: Cross Attention in Vision Transformer"]().
-
-The paper will be public later.
+This is official implement of ["CAT: Cross Attention in Vision Transformer"](https://arxiv.org/abs/2106.05786).
 
 ## Abstract
 
@@ -17,9 +15,11 @@ CAT achieves strong performance on COCO object detection(implemented with [mmdec
 | name  | resolution |acc@1 | acc@5 | #params | FLOPs | model | log |
 | :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
 | CAT-T | 224x224 | 80.3 | 95.0 | 17M | 2.8G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/cat_tiny.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_tiny_log.txt)|
-| CAT-S | 224x224 | 81.8 | 95.6 | 37M | 5.9G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/cat_small.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_small_log.txt) |
+| CAT-S<sup>\*</sup> | 224x224 | 81.8 | 95.6 | 37M | 5.9G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-2079aa3a9339c539c095/cat_small_new.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_small.txt) |
 | CAT-B | 224x224 | 82.8 | 96.1 | 52M | 8.9G  | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/cat_base.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_base_log.txt) |
 | CAT-T-v2 | 224x224 | 81.7 | 95.5 | 36M | 3.9G  | Coming | Coming|
+
+**Note**: <sup>\*</sup> indicates model and log is new version.
 
 ## Models and Results on Object Detection (COCO 2017 val)
 
@@ -38,7 +38,7 @@ CAT achieves strong performance on COCO object detection(implemented with [mmdec
 | CAT-S | Cascade R-CNN<sup>+</sup> | ImageNet-1K | 1x | 45.2 | - | 82M | 270G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/cascade_rcnn_cat_small_1x_ms.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cascade_cat_small_1x_ms.txt)|
 | CAT-B | Cascade R-CNN<sup>+</sup> | ImageNet-1K | 1x | 46.3 | - | 96M | 330G | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-0f39dafcec47a4003737/cascade_rcnn_cat_base_1x_ms.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cascade_cat_base_1x_ms.txt)|
 
-Note: <sup>+</sup> indicates multi-scale training.
+**Note**: <sup>+</sup> indicates multi-scale training.
 
 ## Models and Results on Semantic Segmentation (ADE20K val)
 
@@ -51,15 +51,13 @@ Note: <sup>+</sup> indicates multi-scale training.
 
 ## Citing CAT
 
-The paper will be public later.
-
-You can cite it for now:
+You can cite the paper as:
 ```
-@misc{CAT-2021,
-    title={{CAT}: Cross Attention in Vision Transformer},
-    author={linhezheng},
-    howpublished = {\url{https://github.com/linhezheng19/CAT}},
-    year={2021}
+@article{lin2021cat,
+  title={CAT: Cross Attention in Vision Transformer},
+  author={Hezheng Lin and Xing Cheng and Xiangyu Wu and Fan Yang and Dong Shen and Zhongyuan Wang and Qing Song and Wei Yuan},
+  journal={arXiv preprint arXiv:2106.05786},
+  year={2021}
 }
 ```
 
