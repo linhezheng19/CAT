@@ -12,11 +12,11 @@ CAT achieves strong performance on COCO object detection(implemented with [mmdec
 
 ## Pretrained Models and Results on ImageNet-1K
 
-| name  | resolution |acc@1 | acc@5 | #params | FLOPs | Throughput(imgs/s) | model | log |
-| :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
-| CAT-T | 224x224 | 80.3 | 95.0 | 17M | 2.8G | 857 | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-2079aa3a9339c539c095/cat_tiny.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_tiny_log.txt)|
-| CAT-S<sup>\*</sup> | 224x224 | 81.8 | 95.6 | 37M | 5.9G | 525 | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-2079aa3a9339c539c095/cat_small_new.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_small.txt) |
-| CAT-B | 224x224 | 82.8 | 96.1 | 52M | 8.9G | 384 | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-2079aa3a9339c539c095/cat_base.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_base_log.txt) |
+| name  | resolution |acc@1 | acc@5 | #params | FLOPs | Throughput | model | log |
+| :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: | :---: |
+| CAT-T | 224x224 | 80.3 | 95.0 | 17M | 2.8G | 857 imgs/s | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-2079aa3a9339c539c095/cat_tiny.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_tiny_log.txt)|
+| CAT-S<sup>\*</sup> | 224x224 | 81.8 | 95.6 | 37M | 5.9G | 525 imgs/s | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-2079aa3a9339c539c095/cat_small_new.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_small.txt) |
+| CAT-B | 224x224 | 82.8 | 96.1 | 52M | 8.9G | 384 imgs/s | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-2079aa3a9339c539c095/cat_base.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_base_log.txt) |
 | CAT-T-v2 | 224x224 | 81.7 | 95.5 | 36M | 3.9G | Coming | Coming | Coming|
 
 **Note**: <sup>\*</sup> indicates new version of model and log. Throughput is evaluate on V100 with batch size of 64.
