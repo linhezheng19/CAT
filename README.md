@@ -19,7 +19,7 @@ CAT achieves strong performance on COCO object detection(implemented with [mmdec
 | CAT-B | 224x224 | 82.8 | 96.1 | 52M | 8.9G | 384 imgs/s | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-2079aa3a9339c539c095/cat_base.pth) | [github](https://github.com/linhezheng19/CAT/releases/download/untagged-66ed5a7bb12a93907ecf/cat_base_log.txt) |
 | CAT-T-v2 | 224x224 | 81.7 | 95.5 | 36M | 3.9G | Coming | Coming | Coming|
 
-**Note**: <sup>\*</sup> indicates new version of model and log. Throughput is evaluate on V100 with batch size of 64.
+**Note**: <sup>\*</sup> indicates new version of model and log. Throughput is evaluated on a V100 GPU.
 
 ## Models and Results on Object Detection (COCO 2017 val)
 
