@@ -86,6 +86,14 @@ python -m torch.distributed.launch --nproc_per_node <number-of-gpus> --master_po
 --eval --cfg <config-file> --resume <checkpoint-file> --data-path <imagenet-path>
 ```
 
+#### Throughput
+
+You can evaluate the throughput as follow:
+```
+python -m torch.distributed.launch --nproc_per_node 1 --master_port 10086  main.py \
+--cfg configs/cat_small.yaml --data-path data/CLS-LOC --batch-size 64 --throughput --amp-opt-level O0
+```
+
 ### Detection
 
 Out implementation is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please install [mmdetection](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md).
